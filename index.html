@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report on Delay, Loss, and Throughput in Packet-Switched Networks</title>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+   body {
+    margin: 20px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.06);
+    font-family: "Work Sans", sans-serif;
+}
+
+.head {
+    text-align: center;
+}
+
+.vs {
+    font-size: 24px;
+    color: blue;
+}
+
+.little {
+    font-size: 18px;
+    color: tomato;
+}
+
+b {
+    color: fuchsia;
+}
+
+h4 {
+    color: darkblue;
+}
+
+.section {
+    background: #fff;
+    box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    color: aqua;
+}
+
+.p {
+    text-align: center;
+}
+
+span {
+    color: blue;
+}
+
+.p2 {
+    text-align: center;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    background-color: bisque;
+    width: 15em;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-radius: 2px;
+}
+
+.p3 {
+    text-align: center;
+}
+
+footer {
+    background-color: #1e1d1d;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.06);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.socials li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    background: #000;
+    width: 15em;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .footer-content p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content p {
+        font-size: 10px;
+    }
+
+    .socials {
+        font-size: 14px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h3>Summary Report on <span class="vs">“Report on Delay, Loss, and Throughput in Packet-Switched Networks"</span></h3>
+            <div >
+                <p> <h4>Subject: <b class="little">Computer Networking</b>  <br> Teacher:  <b class="little">Ray</b> <br> Department: <b class="little">Software Engineering</b> </h4> 
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <div class="section">
+        <h4>Introduction:</h4>
+        <p>Packet-switched networks are the backbone of modern telecommunications, enabling the swift and efficient exchange of data between various devices and networks. In these networks, data is broken down into packets, which are then routed independently to their destination. Understanding the metrics of delay, loss, and throughput is paramount for assessing the performance and reliability of packet-switched networks. Delay refers to the time it takes for a packet to travel from the source to the destination, while loss occurs when packets are discarded during transmission. Throughput, on the other hand, is the rate at which packets are successfully delivered. These metrics play a critical role in optimizing network performance and ensuring seamless communication.</p>
+    </div>
+
+    <!-- Delay -->
+    <div class="section">
+        <div>
+            <h4>Delay:</h4>
+            <p>Delay is a critical metric in packet-switched networks, representing the time it takes for a packet to travel from the source to the destination. This delay consists of several components:</p>
+            <img src="img/sharpen_delay.png" alt="">
+
+
+            <ul>
+                <li>
+                    <div class="section">
+                    <h4>Transmission Delay:</h4>
+                    <p>Transmission delay is described as the time taken to transmit a packet across a wire or data link. Therefore, transmission delay is not related with the distance between the source and destination. Rather, it deals with the size of the packet (number of data bits) and the capacity (data-rate) of the communication link.
+                        <p class="p">
+                            <br>
+                            The formula for transmission delay: <br>
+                              <br>
+                              
+                              <span class="p2"> Tt = L/B</span>
+                            
+                              <br>
+                              Where,
+                             <br>
+                             <span>Tt</span> is the transmission <span>delay time</span>
+                               <br>
+                               <span>L</span> is the number of <span>bits in a packet</span> <br>
+                              <span> B </span> is the capacity of the link (or) <span>transmission medium</span>
+                              <img width="500px" src="img/transmission1.png" alt="">
+                        </p>
+                        The transmission delay for a 1000-bit packet over a link with a capacity of 10 bps would be 100 seconds.
+                        <br>
+                        Transmission delay is also known as store-and-forward delay and packetization delay.
+                    </p>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="section">
+                        <h4>Propagation Delay:</h4>
+                        <p>After the packet is transmitted to the transmission medium, it has to go through the medium to reach the destination. Hence the time taken by the last bit of the packet to reach the destination is called propagation delay.
+                            <p class="p"> 
+                                <img src="img/propagation-delay.png" alt="">
+                                <ul>
+                                    <li><span>Distance:</span> It takes more time to reach the destination if the distance of the medium is longer. </li>  
+                                    <li><span>Velocity: </span>If the velocity(speed) of the medium is higher, the packet will be received faster. </li>
+                                </ul> 
+                                <br>
+                                <p class="p2">
+                                    <span>Tp</span>= Distance / Velocity 
+                                </p>
+                            </p>
+                        </p>
+
+                        <h5>Note:</h6>
+                            <ul>
+                                <li><b>Velocity</b>= 3 X 10^8 m/s (for air)</li>
+                                <li><b>Velocity</b>= 2.1 X 10^8 m/s (for optical fibre) </li>
+                            </ul>
+
+                    </div>
+
+                </li>
+
+
+
+               <li>
+                <div class="section">
+                    <h4>Queueing delay:</h4>
+                    <p>The delay that occurs when frames or cells wait in a device before being forwarded, and often a major component of latency. The time spent by packets waiting in buffers before being transmitted. It occurs when multiple packets compete for access to the same output link.
+                    </p>
+                    <p> In general, we can’t calculate queueing delay because we don’t have any formula for that.</p>
+
+                    <p> <b>This delay depends upon the following factors:</b>
+                        <ul>
+                            <li>If the size of the queue is large, the queuing delay will be huge. If the queue is empty there will be less or no delay.</li>
+                            <li>If more packets are arriving in a short or no time interval, queuing delay will be large.</li>
+                            <li>The less the number of servers/links, the greater is the queuing delay.</li>
+                        </ul>
+                    </p>
+
+                </div>
+               </li>
+
+
+               <li>
+                <div class="section">
+                    <h4>Processing Delay:</h4>
+                    <p>In a network based on packet switching, processing delay is the time it takes routers to process the packet header. Processing delay is a key component in network delay.
+                      </p>
+                      <p>
+
+                        During processing of a packet, routers may check for bit-level errors in the packet that occurred during transmission as well as determining where the packet's next destination is. Processing delays in high-speed routers are typically on the order of microseconds or less. After this nodal processing, the router directs the packet to the queue where further delay can happen (queuing delay).</p>
+
+                        <h5> <b>Note:</b> </h5>
+                        <p>Both queueing delay and processing delay doesn’t have any formula because they depend on the speed of the processor.</p>  
+                </div>
+               </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- <!- Loss:-  --> 
+        <div class="section">
+         <h4> Packet Loss:</h4>
+         <p>Packet loss occurs when one or more packets of data traveling across a computer network fail to reach their destination. Packet loss is either caused by errors in data transmission, typically across wireless networks or network congestion. Packet loss is measured as a percentage of packets lost with respect to packets sent.
+         </p>
+          <P class="p3"><img  width="600px" src="img/loss.webp" alt=""></P>
+
+          <ul>
+            <li> 
+                <div class="section">
+                 <h4><b>Network congestion:</b></h4>
+                 <p>Network congestion is a cause of packet loss that can affect all types of networks. When content arrives for a sustained period at a given router or network segment at a rate greater than it is possible to send through, there is no other option than to drop packets.
+                   
+                 </p>
+
+
+                </div>
+
+
+            </li>
+
+            <li>
+                <div class="section">
+                    <h4><b>Hardware Issues:</b></h4>
+                    <p>Packet loss can also result from faulty hardware, like modems, routers, or cables. Imagine the zipper on your luggage broke mid-trip. Something’s going to fall out along the way, isn’t it?</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="section">
+                    <h4><b>Software Issues:</b></h4>
+                    <p>Similarly, out-of-date or malfunctioning software can also create packet loss. We’ve all heard the horror stories of people’s luggage going AWOL thanks to an airline system glitch tagging a bag for the wrong destination. Well, the same thing can happen to data packets.</p>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div class="section">
+                    <h4><b>Network Attacks:</b></h4>
+                    <p>Nefarious actors can also play a role in packet loss. Just like an opportunistic thief might steal a case off the carousel, distributed denial of service (DDoS) attacks and other malicious activity can interfere with network speed and create packet loss.</p>
+                </div>
+            </li>
+
+           <li>
+            <div class="section">
+                <h4><b>Data Transmission Errors:</b></h4>
+                <p>Sadly, sometimes “stuff” just happens, like a baggage handler accidentally leaving your suitcase on the cart while loading the plane. You can’t predict it, but it can happen. This is also the case with data packets. They come across many internet exchange points (IXPs) as they travel through the system, each providing a potential opportunity for damage or loss.</p>
+            </div>
+           </li>
+
+           <li>
+            <div class="section">
+                <h4><b>Security breaches:</b></h4>
+                <p>In denial-of-service attacks, hackers may cause a sudden and sharp increase in packet loss. The hacker's goal is to flood a system with so many requests that the network crashes. The victim's resources are so overwhelmed that it makes it difficult or impossible for anyone else to access them. An unusual spike in packet loss could be a sign of a cyber attack.</p>
+            </div>
+           </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Network throughput -->
+
+        <div class="section">
+
+            <h4>Network Throughput:</h4>
+            <p>In packet switched systems where the load and the throughput always are equal (where packet loss does not occur), the maximum throughput may be defined as the minimum load in bit/s that causes the delivery time (the latency) to become unstable and increase towards infinity.</p>
+
+              <p class="p3"><img src="img/throughput-bandwidth.png" alt=""></p>
+
+            <p>
+                Network throughput refers to the rate of successful message delivery over a communication channel. It is usually measured in bits per second (bps), kilobits per second (kbps), megabits per second (Mbps), or gigabits per second (Gbps). Throughput is a key metric in evaluating the performance of a network and is influenced by various factors such as network congestion, packet loss, latency, and the bandwidth of the communication channel.
+            </p>
+            <p>
+                In the context of packet-switched networks, throughput represents the rate at which packets are successfully transmitted from the source to the destination. It is affected by factors such as the network's capacity, the efficiency of the routing algorithms, and the presence of any bottlenecks or congestion points in the network.
+            </p>
+            <p>
+                High throughput is desirable in network design as it indicates that the network can efficiently handle a large volume of data traffic. It is essential for ensuring smooth and reliable communication in modern networks, especially in applications that require high data transfer rates, such as video streaming, online gaming, and large file transfers.
+            </p>
+
+
+        </div>
+
+
+        <div class="section">
+            <h4>Conclusion:</h4>
+            <p>Efficient management of delay, loss, and throughput is crucial for ensuring the performance and reliability of packet-switched networks. Various protocols and mechanisms, such as Quality of Service (QoS) techniques and congestion control algorithms, are used to optimize these metrics and improve overall network performance.</p>
+
+            <p>It's important to note that delay, loss, and throughput are interrelated. For example, a network with high throughput can experience increased delay and loss due to network congestion. Conversely, a network with low throughput can experience reduced delay and loss due to lower traffic.Network designers must carefully balance these metrics to ensure optimal network performance and user experience</p>
+        </div>
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <h3>Simul Islam</h3>
+        <p>Studying BSc Software Engineering at  <a href="https://nsu.edu.cn/">Chengdu Neusoft University</a>, I am dedicated to mastering the art of software development. With a passion for technology and a commitment to excellence, I aim to innovate and create impactful solutions in the dynamic field of software engineering.</p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/simul.49"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/simul49/"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <a href="#">Books and Internet</a></p>
+        </div>
+    </div>
+    
+</footer>
+
+    
+    
+</body>
+</html>
